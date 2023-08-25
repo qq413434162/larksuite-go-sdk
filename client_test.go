@@ -84,7 +84,7 @@ func TestLarkSuite_UploadFile(t *testing.T) {
 			FileName: "test.xls",
 			File:     f,
 		}
-		fileKey, err := u.UploadFile(
+		fileKey, _, err := u.UploadFile(
 			ctx,
 			req,
 		)

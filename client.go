@@ -56,9 +56,10 @@ func (s *Client) UploadFile(
 	req *FileReq,
 ) (
 	fileKey string,
+	result *larkim.CreateFileResp,
 	err error,
 ) {
-	result, err := s.client.Im.File.Create(context.Background(),
+	result, err = s.client.Im.File.Create(context.Background(),
 		larkim.NewCreateFileReqBuilder().
 			Body(larkim.NewCreateFileReqBodyBuilder().
 				FileType(req.FileType).
